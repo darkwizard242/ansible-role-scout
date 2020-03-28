@@ -1,0 +1,9 @@
+---
+# tasks file for scout
+
+- name: "Downloading and setting up {{ scout_app }} {{ scout_version }} on EL based systems."
+  get_url:
+    url: "{{ scout_dl_url }}"
+    dest: "{{ scout_bin_path }}"
+    mode: "{{ scout_bin_permission_mode }}"
+    remote_src: true

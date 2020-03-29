@@ -1,0 +1,32 @@
+---
+galaxy_info:
+  role_name: scout
+  author: Ali Muhammad
+  description: Installs/Uninstalls 'scout', which was developed by Liam Galvin to perform URL fuzzing and discover undisclosed files.
+  company: none
+  license: MIT
+  min_ansible_version: 2.4
+
+  platforms:
+    - name: Ubuntu
+      versions:
+        - xenial
+        - bionic
+    - name: Debian
+      versions:
+        - jessie
+        - stretch
+        - buster
+    - name: EL
+      versions:
+        - 7
+        - 8
+
+  galaxy_tags:
+    - scout
+    - system
+    - os
+    - urlfuzzer
+    - discover
+    - undisclosedfiles
+    - security

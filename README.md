@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.com/darkwizard242/ansible-role-scout.svg?branch=master)](https://travis-ci.com/darkwizard242/ansible-role-scout) ![Ansible Role](https://img.shields.io/ansible/role/47495?color=dark%20green%20) ![Ansible Role](https://img.shields.io/ansible/role/d/47495?label=role%20downloads) ![Ansible Quality Score](https://img.shields.io/ansible/quality/47495?label=ansible%20quality%20score) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-scout&metric=alert_status)](https://sonarcloud.io/dashboard?id=ansible-role-scout) ![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/darkwizard242/ansible-role-scout?label=release) ![GitHub repo size](https://img.shields.io/github/repo-size/darkwizard242/ansible-role-scout?color=orange&style=flat-square)
+[![Build Status](https://travis-ci.com/darkwizard242/ansible-role-scout.svg?branch=master)](https://travis-ci.com/darkwizard242/ansible-role-scout) ![Ansible Role](https://img.shields.io/ansible/role/47507?color=dark%20green%20) ![Ansible Role](https://img.shields.io/ansible/role/d/47507?label=role%20downloads) ![Ansible Quality Score](https://img.shields.io/ansible/quality/47507?label=ansible%20quality%20score) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-scout&metric=alert_status)](https://sonarcloud.io/dashboard?id=ansible-role-scout) ![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/darkwizard242/ansible-role-scout?label=release) ![GitHub repo size](https://img.shields.io/github/repo-size/darkwizard242/ansible-role-scout?color=orange&style=flat-square)
 
-# Ansible Role: Hugo
+# Ansible Role: scout
 
 Role to install (_by default_) `scout` on **Debian/Ubuntu** and **EL** systems. [Scout](https://github.com/liamg/scout) is a URL fuzzer originally developed by [Liam Galvin](https://github.com/liamg).
 
@@ -45,7 +45,7 @@ For default behaviour of role (i.e. installation of **scout**) in ansible playbo
 ```yaml
 - hosts: servers
   roles:
-    - role: darkwizard242.scout
+    - darkwizard242.scout
 ```
 
 For customizing behavior of role (i.e. specifying the desired **scout** version) in ansible playbooks.
@@ -53,9 +53,9 @@ For customizing behavior of role (i.e. specifying the desired **scout** version)
 ```yaml
 - hosts: servers
   roles:
-    - role: darkwizard242.scout
-      vars:
-        scout_version: 0.7.1
+    - darkwizard242.scout
+  vars:
+    scout_version: 0.7.1
 ```
 
 For customizing behavior of role (i.e. placing binary of **scout** package in different location) in ansible playbooks.
@@ -63,9 +63,9 @@ For customizing behavior of role (i.e. placing binary of **scout** package in di
 ```yaml
 - hosts: servers
   roles:
-    - role: darkwizard242.scout
-      vars:
-        scout_bin_path: /bin/
+    - darkwizard242.scout
+  vars:
+    scout_bin_path: /bin/
 ```
 
 ## License

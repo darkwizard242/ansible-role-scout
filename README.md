@@ -45,7 +45,7 @@ For default behaviour of role (i.e. installation of **scout**) in ansible playbo
 ```yaml
 - hosts: servers
   roles:
-    - role: darkwizard242.scout
+    - darkwizard242.scout
 ```
 
 For customizing behavior of role (i.e. specifying the desired **scout** version) in ansible playbooks.
@@ -53,9 +53,9 @@ For customizing behavior of role (i.e. specifying the desired **scout** version)
 ```yaml
 - hosts: servers
   roles:
-    - role: darkwizard242.scout
-      vars:
-        scout_version: 0.7.1
+    - darkwizard242.scout
+  vars:
+    scout_version: 0.7.1
 ```
 
 For customizing behavior of role (i.e. placing binary of **scout** package in different location) in ansible playbooks.
@@ -63,9 +63,9 @@ For customizing behavior of role (i.e. placing binary of **scout** package in di
 ```yaml
 - hosts: servers
   roles:
-    - role: darkwizard242.scout
-      vars:
-        scout_bin_path: /bin/
+    - darkwizard242.scout
+  vars:
+    scout_bin_path: /bin/
 ```
 
 ## License

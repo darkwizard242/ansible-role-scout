@@ -6,4 +6,4 @@
     url: "{{ scout_dl_url }}"
     dest: "{{ scout_bin_path }}"
     mode: "{{ scout_bin_permission_mode }}"
-    remote_src: true
+    remote_src: yes

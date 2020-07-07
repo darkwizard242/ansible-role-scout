@@ -1,9 +1,8 @@
 ---
-# tasks file for scout
+# tasks file for scout - EL Family
 
-- name: "Downloading and setting up {{ scout_app }} {{ scout_version }} on EL based systems."
+- name: EL Family | Downloading and setting up {{ scout_app }} {{ scout_version }}
   get_url:
     url: "{{ scout_dl_url }}"
     dest: "{{ scout_bin_path }}"
     mode: "{{ scout_bin_permission_mode }}"
-    remote_src: yes

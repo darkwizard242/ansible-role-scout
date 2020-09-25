@@ -16,7 +16,7 @@ Available variables are listed below (located in `defaults/main.yml`):
 
 ```yaml
 scout_app: scout
-scout_version: 0.11.0
+scout_version: 0.12.0
 scout_osarch: linux-amd64
 scout_dl_url: https://github.com/liamg/{{ scout_app }}/releases/download/v{{ scout_version }}/{{ scout_app }}-{{ scout_osarch }}
 scout_bin_path: "/usr/local/bin/{{ scout_app }}"
@@ -28,7 +28,7 @@ scout_bin_permission_mode: '0755'
 Variable                  | Value (default)                                                                                                      | Description
 ------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------
 scout_app                 | scout                                                                                                                | Defines the app to install i.e. **scout**
-scout_version             | 0.11.0                                                                                                               | Defined to dynamically fetch the desired version to install. Defaults to: **0.11.0**
+scout_version             | 0.12.0                                                                                                               | Defined to dynamically fetch the desired version to install. Defaults to: **0.12.0**
 scout_osarch              | linux-amd64                                                                                                          | Defines os architecture. Used for obtaining the correct type of binaries based on OS System Architecture. Defaults to: **linux-amd64**
 scout_dl_url              | <https://github.com/liamg/{{> scout_app }}/releases/download/v{{ scout_version }}/{{ scout_app }}-{{ scout_osarch }} | Defines URL to download the scout binary from.
 scout_bin_path            | "/usr/local/bin/{{ scout_app }}"                                                                                     | Defined to dynamically set the appropriate path to store scout binary into. Defaults to (as generally available on any user's PATH): **/usr/local/bin/scout**

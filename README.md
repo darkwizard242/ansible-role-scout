@@ -16,7 +16,7 @@ Available variables are listed below (located in `defaults/main.yml`):
 
 ```yaml
 scout_app: scout
-scout_version: 0.14.0
+scout_version: 0.15.1
 scout_osarch: linux-amd64
 scout_dl_url: https://github.com/liamg/{{ scout_app }}/releases/download/v{{ scout_version }}/{{ scout_app }}-{{ scout_osarch }}
 scout_bin_path: "/usr/local/bin/{{ scout_app }}"

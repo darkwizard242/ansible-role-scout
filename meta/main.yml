@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   role_name: scout
-  author: Ali Muhammad
+  author: darkwizard242
   description: Installs/Uninstalls 'scout', which was developed by Liam Galvin to perform URL fuzzing and discover undisclosed files.
   company: none
   license: MIT

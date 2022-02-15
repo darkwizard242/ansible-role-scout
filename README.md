@@ -17,22 +17,28 @@ Available variables are listed below (located in `defaults/main.yml`):
 ```yaml
 scout_app: scout
 scout_version: 0.15.1
-scout_osarch: linux-amd64
-scout_dl_url: https://github.com/liamg/{{ scout_app }}/releases/download/v{{ scout_version }}/{{ scout_app }}-{{ scout_osarch }}
+scout_os: linux
+scout_arch: amd64
+scout_dl_url: https://github.com/liamg/{{ scout_app }}/releases/download/v{{ scout_version }}/{{ scout_app }}-{{ scout_os }}-{{ scout_arch }}
 scout_bin_path: "/usr/local/bin/{{ scout_app }}"
-scout_bin_permission_mode: '0755'
+scout_file_owner: root
+scout_file_group: root
+scout_file_mode: '0755'
 ```
 
 ### Variables table:
 
-Variable                  | Value (default)                                                                                                      | Description
-------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------
-scout_app                 | scout                                                                                                                | Defines the app to install i.e. **scout**
-scout_version             | 0.14.0                                                                                                               | Defined to dynamically fetch the desired version to install. Defaults to: **0.14.0**
-scout_osarch              | linux-amd64                                                                                                          | Defines os architecture. Used for obtaining the correct type of binaries based on OS System Architecture. Defaults to: **linux-amd64**
-scout_dl_url              | <https://github.com/liamg/{{> scout_app }}/releases/download/v{{ scout_version }}/{{ scout_app }}-{{ scout_osarch }} | Defines URL to download the scout binary from.
-scout_bin_path            | "/usr/local/bin/{{ scout_app }}"                                                                                     | Defined to dynamically set the appropriate path to store scout binary into. Defaults to (as generally available on any user's PATH): **/usr/local/bin/scout**
-scout_bin_permission_mode | '0755'                                                                                                               | Defines the permission mode level for the file.
+Variable (default) | Description
+------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------
+scout_app          | Defines the app to install i.e. **scout**
+scout_version      | Defined to dynamically fetch the desired version to install. Defaults to: **0.14.0**
+scout_os           | Defines os type. Used for obtaining the correct type of binaries based on OS type. Defaults to: **linux**
+scout_arch         | Defines os architecture. Used to set the correct type of binaries based on OS System Architecture. Defaults to: **amd64**
+scout_dl_url       | Defines URL to download the scout binary from.
+scout_bin_path     | Defined to dynamically set the appropriate path to store scout binary into. Defaults to (as generally available on any user's PATH): **/usr/local/bin/scout**
+scout_file_owner   | Owner for the binary file of scout.
+scout_file_group   | Group for the binary file of scout.
+scout_file_mode    | Mode for the binary file of scout.
 
 ## Dependencies
 
@@ -74,4 +80,4 @@ For customizing behavior of role (i.e. placing binary of **scout** package in di
 
 ## Author Information
 
-This role was created by [Ali Muhammad](https://www.linkedin.com/in/ali-muhammad-759791130/).
+This role was created by [Ali Muhammad](https://www.alimuhammad.dev/).

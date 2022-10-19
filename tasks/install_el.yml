@@ -2,10 +2,9 @@
 # tasks file for scout - EL Family
 
 - name: EL Family | Downloading and setting up {{ scout_app }} {{ scout_version }}
-  get_url:
+  ansible.builtin.get_url:
     url: "{{ scout_dl_url }}"
     dest: "{{ scout_bin_path }}"
-    mode: "{{ scout_bin_permission_mode }}"
+    mode: "{{ scout_file_mode }}"
     owner: "{{ scout_file_owner }}"
     group: "{{ scout_file_group }}"
-    mode: "{{ scout_file_mode }}"

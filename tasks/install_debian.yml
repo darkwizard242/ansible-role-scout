@@ -2,7 +2,7 @@
 # tasks file for scout | Debian/Ubuntu Family
 
 - name: Debian/Ubuntu Family | Downloading and setting up {{ scout_app }} {{ scout_version }}
-  get_url:
+  ansible.builtin.get_url:
     url: "{{ scout_dl_url }}"
     dest: "{{ scout_bin_path }}"
     mode: "{{ scout_bin_permission_mode }}"

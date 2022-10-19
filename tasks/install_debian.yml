@@ -8,4 +8,3 @@
     mode: "{{ scout_bin_permission_mode }}"
     owner: "{{ scout_file_owner }}"
     group: "{{ scout_file_group }}"
-    mode: "{{ scout_file_mode }}"

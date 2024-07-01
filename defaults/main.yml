@@ -3,9 +3,12 @@
 
 scout_app: scout
 scout_version: 0.15.1
-scout_os: linux
-scout_arch: amd64
-scout_dl_url: https://github.com/liamg/{{ scout_app }}/releases/download/v{{ scout_version }}/{{ scout_app }}-{{ scout_os }}-{{ scout_arch }}
+scout_os: "{{ ansible_system | lower }}"
+scout_architecture_map:
+  amd64: amd64
+  x86_64: amd64
+  64-bit: amd64
+scout_dl_url: https://github.com/liamg/{{ scout_app }}/releases/download/v{{ scout_version }}/{{ scout_app }}-{{ scout_os }}-{{ scout_architecture_map[ansible_architecture] }}
 scout_bin_path: "/usr/local/bin/{{ scout_app }}"
 scout_file_owner: root
 scout_file_group: root
